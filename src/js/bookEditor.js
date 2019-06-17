@@ -1,3 +1,5 @@
+import {PhotoHandler} from "./photoHandler";
+
 export class BookEditor {
     constructor() {
         this.title = document.querySelector('#inputTitle');
@@ -23,8 +25,9 @@ export class BookEditor {
     };
 
     createBook = () => {
+        const photoHandler = new PhotoHandler();
         return {
-            photo: handlePhoto(this.photo.files),
+            photo: handlePhoto(photoHandler.getBase64Image()),
             title: this.title.value,
             author: this.author.value,
             year: this.year.value,
@@ -35,10 +38,11 @@ export class BookEditor {
         };
 
         function handlePhoto (obj) {
-            const arrPhoto = [];
-            for (let el of obj) {
-                arrPhoto.push(el.name);
-            }
+            debugger
+            const arrPhoto = obj;
+            // for (let el of obj) {
+            //     arrPhoto.push(el);
+            // }
             switch (arrPhoto.length) {
                 case 1:
                     let a = 0;

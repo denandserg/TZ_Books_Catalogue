@@ -3,6 +3,7 @@ import '../less/some.less';
 import {BookService} from "./bookService";
 import {FilterBook} from "./filterBook";
 import {BookEditor} from "./bookEditor";
+import {PhotoHandler} from "./photoHandler";
 
 window.onload = () => {
 
@@ -37,7 +38,7 @@ window.onload = () => {
 
         function init() {
             const book = {
-                photo: ['shildt2.jpg', 'shildt1.jpg', 'shildt2.jpg', 'shildt1.jpg', 'shildt2.jpg', 'shildt1.jpg', 'shildt2.jpg', 'shildt1.jpg'],
+                photo: ['./img/shildt2.jpg', './img/shildt1.jpg', './img/shildt2.jpg', './img/shildt1.jpg', './img/shildt2.jpg', './img/shildt1.jpg', './img/shildt2.jpg', './img/shildt1.jpg'],
                 title: 'C# 4.0 Полное руководство',
                 author: 'Герберт Шилдт',
                 year: 2001,
@@ -48,7 +49,7 @@ window.onload = () => {
             };
 
             const book2 = {
-                photo: ['flenagan2.png', 'flenagan1.png', 'flenagan3.jpg', 'flenagan2.png', 'flenagan1.png', 'flenagan3.jpg', 'flenagan2.png', 'flenagan1.png'],
+                photo: ['./img/flenagan2.png', './img/flenagan1.png', './img/flenagan3.jpg', './img/flenagan2.png', './img/flenagan1.png', './img/flenagan3.jpg', './img/flenagan2.png', './img/flenagan1.png'],
                 title: 'JavaScript Подробное руководство',
                 author: 'Дэвид Флэнаган',
                 year: 2012,
@@ -59,7 +60,7 @@ window.onload = () => {
             };
 
             const book3 = {
-                photo: ['algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg'],
+                photo: ['./img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg', './img/algoritm1.jpg'],
                 title: 'Алгоритмы: построение и анализ',
                 author: 'Томас Х. Кормен, Чарльз И. Лейзерсон',
                 year: 2019,
@@ -82,10 +83,10 @@ window.onload = () => {
                 let imgHtml = '';
                 curBook.photo.forEach( (el, i) => {
                     if (i === 0) {
-                        let elHTML = `<img class="slide showing" src="./img/${el}">`;
+                        let elHTML = `<img class="slide showing" src="${el}">`;
                         imgHtml+=elHTML;
                     } else {
-                        let elHTML = `<img class="slide" src="./img/${el}">`;
+                        let elHTML = `<img class="slide" src="${el}">`;
                         imgHtml+=elHTML;
                     }
                 });
@@ -158,6 +159,8 @@ window.onload = () => {
             this.childNodes[this.childNodes.length-1].classList.remove('disabled');
         }
     } else {
+        const photoHandle = new PhotoHandler();
+        document.getElementById('inputPhoto').addEventListener('change', photoHandle.setBase64Image, false);
         const title = document.querySelector('#titleHandle');
         const bookEditor = new BookEditor();
         const flag = localStorage.getItem('editBook');
