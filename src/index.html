@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books Catalogue</title>
+</head>
+<body data-id="main">
+    <header>
+        <a href="/">
+            <div class="app-header">
+                <h1>Books</h1>
+            </div>
+        </a>
+    </header>
+    <section class="app-content">
+            <button id="btnAdd"
+                    class='btn btn--long'>
+                Add new books
+            </button>
+            <div class="filter">
+                <input type="text"
+                       id="inputFilter"
+                       class="filter_input"
+                       placeholder="Filter by name book"
+                />
+                <button id="btnFilter"
+                        class='filter_btn btn btn--long'>
+                    Apply
+                </button>
+            </div>
+        <div class="content-wrapper">
+            <ul class='books-list'>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
