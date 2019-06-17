@@ -48,24 +48,24 @@ window.onload = () => {
             };
 
             const book2 = {
-                photo: ['shildt3.jpg', 'shildt2.jpg', 'shildt3.jpg', 'shildt2.jpg', 'shildt3.jpg', 'shildt2.jpg', 'shildt2.jpg', 'shildt1.jpg'],
-                title: 'C# 9.0 Полное руководство',
-                author: 'Вася',
-                year: 2222,
-                production: 'ЧЧЧЧЧЧЧЧ',
-                address: 'г.Днепр, Карла маркса 999/7',
-                phone: '099 - 999 - 99 - 99',
+                photo: ['flenagan2.png', 'flenagan1.png', 'flenagan3.jpg', 'flenagan2.png', 'flenagan1.png', 'flenagan3.jpg', 'flenagan2.png', 'flenagan1.png'],
+                title: 'JavaScript Подробное руководство',
+                author: 'Дэвид Флэнаган',
+                year: 2012,
+                production: 'ООО "Эльбрус"',
+                address: 'г.Днепр, рабочая 23/7',
+                phone: '099 - 777 - 97 - 97',
                 heading: 'Программирование',
             };
 
             const book3 = {
-                photo: ['shildt3.jpg', 'shildt2.jpg', 'shildt3.jpg', 'shildt2.jpg', 'shildt3.jpg', 'shildt2.jpg', 'shildt2.jpg', 'shildt1.jpg'],
-                title: 'Javascript',
-                author: 'Вася',
-                year: 2222,
-                production: 'ЧЧЧЧЧЧЧЧ',
-                address: 'г.Днепр, Карла маркса 999/7',
-                phone: '099 - 999 - 99 - 99',
+                photo: ['algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg', 'algoritm1.jpg'],
+                title: 'Алгоритмы: построение и анализ',
+                author: 'Томас Х. Кормен, Чарльз И. Лейзерсон',
+                year: 2019,
+                production: 'Диалектика-Вильямс',
+                address: 'г.Киев, Карла маркса 999/7',
+                phone: '978-5-907114-11-1',
                 heading: 'Программирование',
             };
 
